@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Functions</title>
+</head>
+<body>
+   <div><h1>Functions Handson
+    <br>
+    DAY 1 Questions
+   </h1></div> 
+    <hr>
+    <p>Q1-Create one function with zero parameter having a console statement;</p>
+    <h3>ANS = Output: Hello, world!</h3>
+    <hr>
+    <p>Q2- Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</p>
+    <h3>ANS = Output: Sum of 3 and 4 is 7</h3>
+    <hr>
+    <p>
+        Q3- Create one arrow function
+    </p>
+    <h3>ANS = Output: Hello, world!</h3>
+    <hr>
+    <pre> Q4-  "Print output: 
+        var x = 21;
+        var girl = function () {
+            console.log(x);
+            var x = 20;
+        };
+        girl ();"</pre>
+        <h3>ANS= Output : undefined
+            <br>
+            Explaination : The inner x variable is defined after the console.log(x) statement, the value of the inner x variable is not accessible at that point. Therefore, when console.log(x) is executed, the value of x is undefined.
+        </h3>
+        <hr>
+        <pre>Q5- "Print output: 
+            var x = 21;
+            girl ();
+            console.log(x)
+            function girl() {
+                console.log(x);
+                var x = 20;
+            };
+            "</pre>
+            <h3>ANS = Output : undefined 21
+                <br>
+                Explanation : The first console.log(x) inside the girl function outputs undefined because of hoisting, and the second console.log(x) outside the girl function outputs 21, the value of the global variable x.
+                </h3>
+            <hr>
+            <pre> Q6-  "Print output
+
+                var x = 21;
+                a();
+                b();
+                
+                  function a() {
+                    
+                   x = 20;
+                  console.log(x);
+                };
+                 function b() {
+                    
+                    x = 40;
+                   console.log(x);
+                };"</pre>
+                <h3>ANS = Output: 20 <br> 40
+                    <br>
+                    Explanation :  since the variable x is declared outside both functions, it is accessible and modifiable by both functions. Therefore, when the value of x is changed inside function a(), it affects the value of x seen inside function b().
+       </h3>
+                <hr>
+                <p> Q7- Write a function that accepts parameter n and returns factorial of n</p>
+                <h3>ANS= Output : 40
+                    <br>
+                    Explanation: In this function, we first check if n is either 0 or 1. If so, we return 1, as the factorial of 0 and 1 is 1.
+
+                    For any other value of n, we initialize a variable result to 1. Then, we iterate from 2 to n and multiply result by each number in the range. Finally, we return the resulting result, which will be the factorial of n.
+                </h3>
+                <hr>
+               <div> <h1>DAY 2 Questions</h1></div>
+               <hr>
+                
+                <pre>Q1-  "Guess the Output
+
+function FindSum(a, b){
+return a + b;
+ }
+
+ function DisplayData(data, batch){
+console.log(`i am from ${data} and My batch is EA${batch}`)
+              }
+
+DisplayData(""PrepBytes"", FindSum(10, 9));"
+                </pre>
+                <h3>ANS = Output : I am from PrepBytes and My batch is EA19
+            
+                </h3>
+                <hr>
+                <pre>Q2- "Guess the output
+
+                    Abc();
+                    const Abc = function(){
+                        let value = 20;
+                        console.log(value);
+                    }"</pre>
+                    <h3>ANS = Output: runtime error.
+                        <br>
+                        Explanation :The error occurs because you are trying to invoke the function Abc() before it is declared. In JavaScript, function declarations are hoisted to the top of their scope, meaning they can be called before they are declared. However, function expressions, such as the one you have used (const Abc = function() {...}), are not hoisted and cannot be called before they are defined.
+                    </h3>
+                    <hr>
+                    <pre>Q3- "Guess the output
+
+                        var a = 10;
+                        (function (){
+                            console.log(a);
+                            var a = 20;
+                        })();"</pre>
+                        <h3>ANS= Output : undefined.
+                            <br>
+                            Explaination : Due to hoisting, the local variable a is hoisted to the top of the function scope. Therefore, when the code executes console.log(a) before the local variable a is assigned the value 20, the local variable a is in a "temporal dead zone" and has the value undefined at that point.
+                        </h3>
+                        <hr>
+                        <pre>Q4- "Guess the Output
+                            const greet =  function(name){
+                                return function(m){
+                                
+                                    console.log(`Hi!! ${name}, ${m}`);
+                                }
+                            }
+                              
+                            const greet_message = greet('EA19');
+                            greet_message(""Welcome To PrepBytes"")"</pre>
+                            <h3> ANS = Hi!! EA19, Welcome To PrepBytes
+                                
+                            </h3>
+    <script src="script.js"></script>
+</body>
+</html>
